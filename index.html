@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/img/logo.svg">
+</head>
+<body>
+    <div class="wrapper">
+        <section id="video">
+            <div class="section-title">
+                <h2 data-i18="video">Video</h2>
+            </div>
+            <div class="video-player">
+                <div class="poster"></div>
+                <button class="play-hover">
+                    <!-- <img class="logo-icon" src="./assets/img/play_hover.svg" alt="play_video"> -->
+                </button>
+                    <div class="player__controls">
+                        <div class="progress">
+                            <div class="progress__filled"></div>
+                        </div>
+                        <button class="play__button "></button>
+                        <input type="range" name="volume" class="player__slider" value="10">
+                        <button class="mute"></button>
+                        <!-- <button data-skip="-10" class="player__button">« 10s</button>
+                        <button data-skip="25" class="player__button">25s »</button> -->
+                        <!-- ⧉ -->
+                        <div class="time">00:<span class="left">00</span> / 00:<span class="duration">00</span> </div>
+                         
+                    </div>
+                <video src="assets/video/video.mp4" class="viewer" controls></video></video>
+
+            </div>
+        </section>
+        <footer>
+            <div class="footer-data">
+                    <span>©</span>
+                    <span>2022</span>
+                    <span><a href="https://github.com/AndreyGoncharik" target="_blank">github</a></span>
+            </div>
+            <div class="footer-school-link">
+                <a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
+            </div>    
+            <div class="social-list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/svg/inst.svg" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/svg/fb.svg" alt="fb">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/svg/tw.svg" alt="tw">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/svg/pinterest.svg" alt="pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+        <!-- <video src="assets/video/video.mp4" poster="assets/video/poster.jpg"></video> -->
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
