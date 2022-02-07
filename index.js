@@ -8,13 +8,10 @@ const progressBar = playerArea.querySelector('.progress__filled');
 const volumeSlider = document.querySelector('.player__slider');
 const playButton = document.querySelector('.play__button');
 const muteButton = document.querySelector('.mute');
-let countTime; // setInterval(() => updateProgress()
+let countTime; 
 let leftTime;
 const left = document.querySelector('.left');
 const dur = document.querySelector('.duration');
-//player.currentTime = (
-//document.querySelector{'[-webkit-media-controls]'}
-//console.log(duratin);
 
 playSvg.addEventListener(('click'), () => {    
     poster.classList.toggle('hidden');    
@@ -29,7 +26,6 @@ playSvg.addEventListener(('click'), () => {
     playButtonToggle();
     const duration = Math.round(player.duration);
     
-    
     if (player.paused) {
         
     } else {
@@ -38,9 +34,6 @@ playSvg.addEventListener(('click'), () => {
             Math.round(player.currentTime) < 10 ? left.innerHTML = '0' + Math.round(player.currentTime) : left.innerHTML = Math.round(player.currentTime), 1000;
         });
         dur.innerHTML = duration;
-        
-        //setInterval(() => updateProgress(), 50);
-        //playButtonToggle();
     }
     
 });
@@ -58,8 +51,7 @@ player.addEventListener(('click'), () => {
         clearInterval(countTime);
         clearInterval(leftTime);
                   
-    });
-
+        });
     }
 });
 
@@ -81,8 +73,8 @@ playButton.addEventListener(('click'), () => {
 
 function muteButtonToggle() {
     muteButton.classList.toggle('mute-off');
-    //rangeSlider
 }
+
 muteButton.addEventListener(('click'), () => {
     let tempVol = volumeSlider.value;
     muteButtonToggle();
@@ -100,13 +92,8 @@ muteButton.addEventListener(('click'), () => {
         }
         player.volume = tempVol / 100;
         volumeSlider.value = tempVol;
-        // let vol = 0.10;
-        //console.log('no mute', player.volume)
         volumeSlider.style.background = `linear-gradient(to right, #fff 0%, #fff ${tempVol}%, #00000080 ${tempVol}%, #00000080 100%)`; 
-        
-        
     }  
-       
 });
 
 progress.addEventListener(('click'), (e) => {
@@ -122,7 +109,7 @@ function mouseOver() {
 }
 function mouseOut() {
     playerArea.addEventListener('mouseout', () => {
-        // controlPanel.classList.remove('active');     
+        controlPanel.classList.remove('active');     
     });
 }
 
@@ -138,9 +125,5 @@ function togglePlay() {
     } else {
         console.log('play')
     }
-    //player[player.paused ? console.log('paus') : console.log('play')]();
-        // playSvg.classList.remove('hidden') :
-        // playSvg.classList.add('hidden')
-    
 }
 console.log('hello!');
